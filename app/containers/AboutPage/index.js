@@ -25,7 +25,7 @@ export class AboutPage extends React.Component {
             die via <a href='https://velehanden.nl/projecten/bekijk/details/project/amsterdam_kaarten'>Vele Handen</a> gegeorefereerd zijn.
           </p>
           <p>
-            Amsterdam op de Kaart is gemaakt door Menno den Engelse en Bert Spaan, voor <a href='http://hackalod.com/'>HackaLOD 2018</a>. Voor meer informatie, zie <a href='https://github.com/bertspaan/hackalod'>GitHub</a>.
+            Amsterdam op de Kaart is gemaakt door <a href='http://www.islandsofmeaning.nl/'>Menno den Engelse</a> en <a href='http://bertspaan.nl'>Bert Spaan</a>, voor <a href='http://hackalod.com/'>HackaLOD 2018</a>. Voor meer informatie, zie <a href='https://github.com/bertspaan/hackalod'>GitHub</a>.
           </p>
 
           <h3>Broncode</h3>
