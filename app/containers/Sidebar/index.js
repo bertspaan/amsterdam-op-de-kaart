@@ -33,10 +33,7 @@ export class Sidebar extends React.Component {
         </span>
       } else {
         text = <span>
-          Use your mouse or arrow keys to move around the map. With a mouse,
-          hover over outlined areas to see details and click to lock and unlock
-          selected areas. When using arrow keys, press Enter to lock selections and
-          Escape to unlock.
+          Sleep om de kaart te verschuiven, klik om kaarten te selecteren.
         </span>
       }
 

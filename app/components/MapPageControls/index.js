@@ -41,7 +41,7 @@ function MapPageControls (props) {
     footer = (
       <Box>
         <span>
-          {`${props.selectedCount} ${mapString} geselecteerd — click again to unlock selection`}
+          {`${props.selectedCount} ${mapString} geselecteerd — klik om de deselecteren`}
         </span>
       </Box>
     )
@@ -49,7 +49,7 @@ function MapPageControls (props) {
     footer = (
       <Box>
         <span>
-          {`${props.selectedCount} ${mapString} gevonden — click to lock selection`}
+          {`${props.selectedCount} ${mapString} gevonden — klik om te selecteren`}
         </span>
       </Box>
     )
