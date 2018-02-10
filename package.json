@@ -1,10 +1,10 @@
 {
-  "name": "spacetime-maps-by-decade",
+  "name": "amsterdam-op-de-kaart",
   "version": "1.1.1",
-  "description": "New York City street maps from the New York Public Library, grouped by decade",
+  "description": "Amsterdamse historische kaarten, op de kaart",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nypl-spacetime/maps-by-decade.git"
+    "url": "git://github.com/bertspaan/amsterdam-op-de-kaart.git"
   },
   "engines": {
     "npm": ">=3"
