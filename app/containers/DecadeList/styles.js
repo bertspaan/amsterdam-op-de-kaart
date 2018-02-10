@@ -74,7 +74,6 @@ export const ChildContainer = styled(Item)`
 export const MiniMapContainer = styled.div`
   width: 100%;
   height: 100%;
-  border-radius: 3px
-
+  border-radius: 3px;
   background-color: ${mapColor};
 `

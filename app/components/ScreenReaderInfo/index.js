@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 function ScreenReaderInfo (props) {
   return (
     <span className='only-screen-reader'>
-      For text-based search, visit the <Link to='/list'>List page</Link>. For more information, visit the <Link to='/about'>About page</Link>.
+      Bekijk de <Link to='/list'>lijstweergave</Link> om de kaarten op een niet-visuele manier te doorzoeken.
     </span>
   )
 }

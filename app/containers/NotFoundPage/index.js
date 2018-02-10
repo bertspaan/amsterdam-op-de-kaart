@@ -14,8 +14,8 @@ export default class NotFound extends React.Component {
     return (
       <CenteredItemPage>
         <Container>
-          <p>Page Not Found</p>
-          <Link to='/'>Return to homepage</Link>
+          <p>Niet gevonden!</p>
+          <Link to='/'>Terug naar begin</Link>
         </Container>
       </CenteredItemPage>
     )

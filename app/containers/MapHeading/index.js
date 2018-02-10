@@ -33,7 +33,7 @@ export class MapHeading extends React.Component {
             {this.props.map.properties.name}
           </span>
         </Title>
-        <Year>Year published: <strong>{this.props.map.properties.year}</strong></Year>
+        <Year>Jaar: <strong>{this.props.map.properties.year}</strong></Year>
         <Links>
           {links}
         </Links>

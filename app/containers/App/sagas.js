@@ -12,7 +12,6 @@ import {
 } from 'containers/App/actions'
 
 import {
-  selectMiniMaps,
   selectDataConfig
 } from 'containers/App/selectors'
 
@@ -35,21 +34,7 @@ function* loadDataSaga () {
 }
 
 function* newMiniMap (action) {
-  const miniMaps = yield select(selectMiniMaps())
 
-  const newMiniMap = miniMaps[miniMaps.length - 1]
-  const existingMiniMaps = miniMaps.slice(0, -1)
-
-  const syncOptions = {
-    noInitialSync: true
-  }
-
-  // Sync maps when new minimap is created
-  // https://github.com/turban/Leaflet.Sync
-  existingMiniMaps.forEach((existingMap) => {
-    newMiniMap.sync(existingMap, syncOptions)
-    existingMap.sync(newMiniMap, syncOptions)
-  })
 }
 
 function* newMiniMapSaga () {

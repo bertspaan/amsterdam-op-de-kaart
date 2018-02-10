@@ -12,7 +12,7 @@ function MapPageControls (props) {
     previousDecade = (
       <ArrowLink direction='left'
         title='Go to previous decade — or press [' to={`/${props.previousDecade}`}>
-        {props.previousDecade}s
+        {props.previousDecade}
       </ArrowLink>
     )
   } else {
@@ -26,7 +26,7 @@ function MapPageControls (props) {
     nextDecade = (
       <ArrowLink direction='right'
         title='Go to next decade — or press ]' to={`/${props.nextDecade}`}>
-        {props.nextDecade}s
+        {props.nextDecade}
       </ArrowLink>
     )
   } else {
@@ -36,12 +36,12 @@ function MapPageControls (props) {
   }
 
   let footer
-  const mapString = props.selectedCount === 1 ? 'map' : 'maps'
+  const mapString = props.selectedCount === 1 ? 'kaart' : 'kaarten'
   if (props.locked) {
     footer = (
       <Box>
         <span>
-          {`${props.selectedCount} ${mapString} selected — click again to unlock selection`}
+          {`${props.selectedCount} ${mapString} geselecteerd — click again to unlock selection`}
         </span>
       </Box>
     )
@@ -49,7 +49,7 @@ function MapPageControls (props) {
     footer = (
       <Box>
         <span>
-          {`${props.selectedCount} ${mapString} found — click to lock selection`}
+          {`${props.selectedCount} ${mapString} gevonden — click to lock selection`}
         </span>
       </Box>
     )
@@ -62,7 +62,7 @@ function MapPageControls (props) {
           <Title>{decadeToPeriod(props.decade)}</Title>
           <Box>
             <Link title='Go back to overview - or press Escape' to={`/`}>
-              Back<span className='hide-on-mobile'> to overview</span>
+              Terug<span className='hide-on-mobile'> naar overzicht</span>
             </Link>
           </Box>
         </Middle>
@@ -79,4 +79,3 @@ function MapPageControls (props) {
 }
 
 export default MapPageControls
-

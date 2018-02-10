@@ -12,7 +12,7 @@ import { Item, ImageLink, DataContainer } from './styles'
 export class MapListItem extends React.Component {
 
   render () {
-    const imageUrl = `http://images.nypl.org/index.php?id=${this.props.map.properties.imageId}&t=f`
+    const imageUrl = `http://images.memorix.nl/ams/thumb/250x250/${this.props.map.properties.memorixUuid}.jpg`
 
     const jsonUriData = encodeURIComponent(JSON.stringify({
       type: 'Feature',
@@ -40,9 +40,8 @@ export class MapListItem extends React.Component {
         <DataContainer>
           <MapHeading map={this.props.map}>
             {this.props.children}
-            <a href={`http://maps.nypl.org/warper/maps/${this.props.map.properties.id}`} target='_blank'>View in Map Warper</a>
-            <a href={`http://digitalcollections.nypl.org/items/${this.props.map.properties.uuid}`} target='_blank'>View in Digital Collections</a>
-            <a href={geojsonUrl} target='_blank'>View data on geojson.io</a>
+            <a href={`http://beeldbank.amsterdam.nl/afbeelding/${this.props.map.properties.imageId}`} target='_blank'>Bekijk in de Beeldbank</a>
+            <a href={geojsonUrl} target='_blank'>Bekijk data op geojson.io</a>
           </MapHeading>
         </DataContainer>
         <ImageLink href='javascript:void(0)' onClick={this.showLightbox.bind(this)}>

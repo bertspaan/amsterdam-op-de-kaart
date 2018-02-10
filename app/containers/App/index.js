@@ -18,8 +18,6 @@ import Loading from 'containers/Loading'
 
 import { Container, Contents } from './styles'
 
-import favIcon from 'images/favicon.png' // eslint-disable-line
-
 export class App extends React.Component {
 
   constructor (props) {
@@ -84,7 +82,7 @@ export class App extends React.Component {
       contents = this.props.children
     }
 
-    const defaultTitle = 'Maps by Decade - NYC Space/Time Directory'
+    const defaultTitle = 'Amsterdam op de Kaart'
 
     return (
       <Container>

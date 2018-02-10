@@ -20,8 +20,6 @@ const Text = styled.div`
   white-space: nowrap;
 `
 
-const nypl = require('images/nypl.svg')
-
 export class Loading extends React.Component {
 
   constructor (props) {
@@ -29,16 +27,15 @@ export class Loading extends React.Component {
     this.state = {
       dots: 0,
       maxDots: 3,
-      mbs: '3MB'
+      mbs: '1MB'
     }
   }
 
   render () {
-    var loading = `Loading maps (${this.state.mbs})${(new Array(this.state.dots + 1).join('.'))}`
+    var loading = `Kaarten laden (${this.state.mbs})${(new Array(this.state.dots + 1).join('.'))}`
     return (
       <CenteredItemPage>
         <Container>
-          <img src={nypl} />
           <Text>{loading}</Text>
         </Container>
       </CenteredItemPage>

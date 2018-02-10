@@ -9,9 +9,9 @@ export const StyledMiniMap = styled.div`
   width: 100%;
   height: 100%;
 
-  cursor: pointer;
   border-radius: 3px;
-
+  cursor: pointer;
+  
   & .leaflet-container:focus {
     outline: 2px solid;
     outline-color: ${outlineColor};

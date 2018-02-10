@@ -34,8 +34,8 @@ export default function createRoutes (store) {
         importModules.catch(errorLoading)
       }
     }, {
-      path: '/about',
-      name: 'about',
+      path: '/over',
+      name: 'over',
       getComponent (nextState, cb) {
         const importModules = Promise.all([
           System.import('containers/AboutPage')
@@ -50,8 +50,8 @@ export default function createRoutes (store) {
         importModules.catch(errorLoading)
       }
     }, {
-      path: '/list',
-      name: 'list',
+      path: '/lijst',
+      name: 'lijst',
       getComponent (nextState, cb) {
         const importModules = Promise.all([
           System.import('containers/DataPage')

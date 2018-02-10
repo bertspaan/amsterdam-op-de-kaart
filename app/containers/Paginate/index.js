@@ -41,7 +41,7 @@ export class Paginate extends React.Component {
 
   createItem (page) {
     return (
-      <Item page={page} label={`Go to page ${page + 1}`} key={page}
+      <Item page={page} label={`Ga naar pagina ${page + 1}`} key={page}
         currentPage={this.props.page} onClick={this.createPageClickHandler(page)}>{page + 1}</Item>
     )
   }
@@ -62,7 +62,7 @@ export class Paginate extends React.Component {
     if (this.props.page > 0) {
       const previousPage = this.props.page - 1
       previous = (
-        <Item page={previousPage} label={`Previous page, page ${previousPage + 1}`}
+        <Item page={previousPage} label={`Vorige pagina, pagina ${previousPage + 1}`}
           currentPage={this.props.page} onClick={this.createPageClickHandler(previousPage)}>&lt;</Item>
       )
     } else {
@@ -71,7 +71,7 @@ export class Paginate extends React.Component {
 
     if (this.props.page < this.props.pageCount - 1) {
       const nextPage = this.props.page + 1
-      next = <Item page={nextPage} label={`Next page, page ${nextPage + 1}`}
+      next = <Item page={nextPage} label={`Volgende pagina, pagina ${nextPage + 1}`}
         currentPage={this.props.page} onClick={this.createPageClickHandler(nextPage)}>&gt;</Item>
     } else {
       next = <Item>&gt;</Item>
@@ -129,7 +129,7 @@ export class Paginate extends React.Component {
 
     let currentPageElement
     if (this.props.ariaLive) {
-      const currentPage = `Current page: ${this.props.page + 1}`
+      const currentPage = `Huidige pagina: ${this.props.page + 1}`
       currentPageElement = (
         <div className='only-screen-reader' id='paginate-current-page'
           aria-atomic='true' aria-live='polite' aria-relevant='text additions'>
@@ -139,7 +139,7 @@ export class Paginate extends React.Component {
     }
 
     return (
-      <StyledNav aria-label='Pagination navigation'>
+      <StyledNav aria-label='Vorige, volgende'>
         <ol aria-controls='paginate-current-page'>
           {previous}
           {firstItems}

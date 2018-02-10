@@ -108,7 +108,9 @@ const selectLightboxIndex = () => createSelector(
 
 const selectLightboxImages = (quality = 'q') => createSelector(
   selectGlobal(),
-  (globalState) => globalState.get('selectedMaps').map((map) => `http://images.nypl.org/index.php?id=${map.properties.imageId}&t=${quality}`)
+  (globalState) => globalState.get('selectedMaps').map((map) => {
+    return `http://images.memorix.nl/ams/thumb/1000x1000/${map.properties.memorixUuid}.jpg`
+  })
 )
 
 const selectLightboxTitle = () => createSelector(

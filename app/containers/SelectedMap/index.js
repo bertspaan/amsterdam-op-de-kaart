@@ -16,11 +16,11 @@ export class SelectedMap extends React.Component {
     let tileLink
     if (this.props.tilesOnMap) {
       tileLink = (
-        <a href='javascript:void(0)' onClick={this.removeTileLayerMap.bind(this)}>Remove from map</a>
+        <a href='javascript:void(0)' onClick={this.removeTileLayerMap.bind(this)}>Verwijder van kaart</a>
       )
     } else {
       tileLink = (
-        <a href='javascript:void(0)' onClick={this.addTileLayerMap.bind(this)}>View on map</a>
+        <a href='javascript:void(0)' onClick={this.addTileLayerMap.bind(this)}>Bekijk op de kaart</a>
       )
     }
 

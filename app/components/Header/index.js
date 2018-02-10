@@ -3,28 +3,15 @@ import { Link } from 'react-router'
 
 import Menu from 'components/Menu'
 
-import { StyledHeader, Logo, Subtitles } from './styles'
-
-import nypl from 'images/nypl-white.svg'
+import { StyledHeader } from './styles'
 
 export default function Header (props) {
   return (
     <StyledHeader className='align-center'>
       <div className='align-center'>
-        <Logo style={{backgroundImage: `url(${nypl})`}} href='//nypl.org' target='_blank'>
-          <span>The New York Public Library</span>
-        </Logo>
-        <Subtitles>
-          <div>
-            <a href='http://nypl.org/' target='_blank'>The New York Public Library</a>
-          </div>
-          <div>
-            <a href='http://spacetime.nypl.org/' target='_blank'>NYC Space/Time Directory</a>
-          </div>
-        </Subtitles>
         <h1>
           <Link to='/'>
-            Maps by Decade
+            <strong>Amsterdam</strong> op de Kaart
           </Link>
         </h1>
       </div>

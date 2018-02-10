@@ -60,7 +60,7 @@ export class DataPageList extends React.Component {
     if (count === 0) {
       return <NoMapsFound groupBounds={this.props.groupBounds} />
     } else {
-      const mapsFound = `${formatNumber(this.props.features.length)} maps found`
+      const mapsFound = `${formatNumber(this.props.features.length)} kaarten gevonden`
       return (
         <div>
           <Found id='data-page-maps-found' aria-atomic='true'

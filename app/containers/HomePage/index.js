@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router'
 
 import Article from 'components/Article'
 import ScreenReaderInfo from 'components/ScreenReaderInfo'
@@ -15,17 +14,16 @@ import {
 export class HomePage extends React.Component {
 
   render () {
-    const yearMin = this.props.groupBounds[0]
-    const yearMax = this.props.groupBounds[1]
     return (
       <Article>
         <DecadeList>
           <p>
-            Maps by Decade shows digitized New York City street maps from the New York Public Library's <a href='https://www.nypl.org/about/divisions/map-division'>Map Division</a> published between {yearMin} and {yearMax}, grouped by decade.
+            Amsterdam op de Kaart laat kaarten uit de <a href='http://beeldbank.amsterdam.nl/beeldbank'>Beeldbank van het Amsterdamse Stadsarchief</a> zien,
+            die via <a href='https://velehanden.nl/projecten/bekijk/details/project/amsterdam_kaarten'>Vele Handen</a> gegeorefereerd zijn.
+            <ScreenReaderInfo />
           </p>
           <p>
-            Use it to compare urban geography across time, and marvel at the countours of New York City's past. For more information, see the <Link to='/about'>About page</Link>.
-            <ScreenReaderInfo />
+            Via deze website is het makkelijker dan ooit om de historische kaarten van Amsterdam te vinden en vergelijken!
           </p>
         </DecadeList>
       </Article>

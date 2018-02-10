@@ -76,10 +76,11 @@ function appReducer (state = initialState, action) {
         var nextPrevGroups = {}
         var groups = new Set()
 
-        action.data.features.forEach((feature) => {
-          const group = feature.properties.group
-          groups.add(group)
-        })
+        action.data.features
+          .forEach((feature) => {
+            const group = feature.properties.group
+            groups.add(group)
+          })
 
         const sortedGroups = [...groups].sort()
 

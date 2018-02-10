@@ -27,15 +27,15 @@ export class Filters extends React.Component {
 
     let removeFilters
     if (this.props.hasFilters) {
-      removeFilters = <Button onClick={this.resetFilters.bind(this)}>Remove filters</Button>
+      removeFilters = <Button onClick={this.resetFilters.bind(this)}>Verwijder filters</Button>
     }
 
     return (
       <div>
-        <DataPageHeading>Search maps by decade and title:</DataPageHeading>
+        <DataPageHeading>Zoek kaarten met periode en titel:</DataPageHeading>
         <StyledForm onSubmit={this.handleSubmit.bind(this)} ref='form' aria-controls='data-page-maps-found'>
           <Fieldset>
-            <legend>Filter by decade:</legend>
+            <legend>Periode:</legend>
             <Decades>
               { groups.map((group, index) => {
                 let checked = true
@@ -50,7 +50,7 @@ export class Filters extends React.Component {
                       checked={checked} value={group}
                       onChange={this.handleChange.bind(this)} />
                     <label htmlFor={`filter-decades-${index}`} aria-label={decadeToPeriod(group)} >
-                      {group}s
+                      {group}
                     </label>
                   </div>
                 )
@@ -58,11 +58,11 @@ export class Filters extends React.Component {
             </Decades>
           </Fieldset>
           <div>
-            <label htmlFor='filter-title'>Filter by title:</label>
+            <label htmlFor='filter-title'>Titel:</label>
             <InputContainer>
               <input type='text' name='title' value={this.props.filters.title || ''}
                 id='filter-title' autoComplete='off'
-                placeholder='e.g. "greenpoint"' onChange={this.handleChange.bind(this)} />
+                placeholder='b.v. "keizersgracht"' onChange={this.handleChange.bind(this)} />
             </InputContainer>
           </div>
           { /*

@@ -1,5 +1,5 @@
 export function decadeToPeriod (decade) {
-  return decade + ' - ' + (parseInt(decade) + 9)
+  return decade + ' - ' + (parseInt(decade) + 24)
 }
 
 export function formatNumber (number) {
@@ -9,7 +9,7 @@ export function formatNumber (number) {
     .reverse()
     .join('')
     .match(/.{1,3}/g)
-    .join(',')
+    .join('.')
     .split('')
     .reverse()
     .join('')

@@ -29,7 +29,7 @@ export class Sidebar extends React.Component {
       let text
       if (this.props.hasTouch) {
         text = <span>
-          Drag to move around the map, and tap to lock selected areas.
+          Sleep om de kaart te verschuiven, klik om kaarten te selecteren.
         </span>
       } else {
         text = <span>
@@ -46,7 +46,7 @@ export class Sidebar extends React.Component {
             ←
           </span>
           <span>
-            {text} <span>See the <Link to='/about'>About page</Link> for more information.</span>
+            {text} <span>Zie <Link to='/over'>Over</Link> voor meer informatie.</span>
           </span>
         </Instructions>
       )
@@ -56,8 +56,8 @@ export class Sidebar extends React.Component {
       <Container ref='sidebar'>
         <GoBack>
           <ArrowLink direction='left' onClick={this.goBack.bind(this)} showTextOnMobile
-            title='Go back to map - or press Escape' >
-            Go back to map
+            title='Terug naar kaart - of gebruik de Escape-toets' >
+            Terug naar kaart
           </ArrowLink>
         </GoBack>
         <List>

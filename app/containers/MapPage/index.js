@@ -58,8 +58,6 @@ export class MapPage extends React.Component {
     params: {}
   }
 
-  getTileUrl = (mapId) => `http://maps.nypl.org/warper/maps/tile/${mapId}/{z}/{x}/{y}.png`
-
   tileLayers = {}
   tileLayerMaps = {}
 
@@ -69,8 +67,14 @@ export class MapPage extends React.Component {
         for (var newMapId of nextProps.tileLayerMaps.keys()) {
           if (!this.tileLayerMaps[newMapId]) {
             const map = nextProps.tileLayerMaps.get(String(newMapId))
-            var tileUrl = this.getTileUrl(map.properties.id)
-            var tileLayer = L.tileLayer(tileUrl).addTo(this.map)
+            const uuid = map.properties.memorixGeotiffUuid
+
+            const tileLayer = L.tileLayer.wms('http://geoserver.memorix.nl/geoserver/ams/wms?', {
+              layers: `ams:${uuid}`,
+              transparent: true,
+              format: 'image/png'
+            }).addTo(this.map)
+
             this.tileLayers[newMapId] = tileLayer
             this.tileLayerMaps[newMapId] = map
           }
@@ -103,7 +107,7 @@ export class MapPage extends React.Component {
 
     return (
       <Container>
-        <Helmet title={`${decade}s`} />
+        <Helmet title={`${decade}`} />
         <MapPane active={!this.props.selectedMapsLocked}>
           <ScreenReaderInfo />
           <MapPageControls previousDecade={this.props.previousDecade} nextDecade={this.props.nextDecade}
