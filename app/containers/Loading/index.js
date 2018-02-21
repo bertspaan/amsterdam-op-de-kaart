@@ -27,7 +27,7 @@ export class Loading extends React.Component {
     this.state = {
       dots: 0,
       maxDots: 3,
-      mbs: '1MB'
+      mbs: '3MB'
     }
   }
 
