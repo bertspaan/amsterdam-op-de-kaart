@@ -1,4 +1,4 @@
 publicPath: /amsterdam-op-de-kaart/
 
 data:
-  baseUrl: http://bertspaan.nl/hackalod/grouped-maps/
+  baseUrl: https://bertspaan.nl/hackalod/grouped-maps/
